@@ -1,7 +1,10 @@
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 from flask import Flask, Blueprint
 from flask_cors import CORS
 from config import Config
-
 
 #blueprint imports dito naman
 
