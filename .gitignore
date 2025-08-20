@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Env files
+.env
+
+# Firebase keys
+FirebaseApi/*.json
+*.serviceAccountKey.json
+
+# VSCode
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
