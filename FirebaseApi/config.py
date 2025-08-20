@@ -5,7 +5,7 @@ cred = credentials.Certificate("FirebaseApi/atomic-odyssey-firebase-adminsdk-fbs
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
-profile_storage = storage.bucket()
+profile_storage = storage.bucket("profile-bucket")
 
 
 UserDB = db.collection("users")

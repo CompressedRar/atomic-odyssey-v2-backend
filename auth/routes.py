@@ -8,12 +8,10 @@ def test_route():
     return jsonify(message = count)
 
 
-@auth_bp.route("/test-user-create")
+@auth_bp.route("/test-user-create", methods = ["POST"])
 def test_user_creation():
     username = request.form.get("username")
     uuid = request.form.get("uuid")
-    password = request.form.get("password")
-    email = request.form.get("email")
     #profile_pic = request.files("file")
 
-    return Auth.create_account(uuid, username, email, password)
+    return Auth.create_account(uuid, username)

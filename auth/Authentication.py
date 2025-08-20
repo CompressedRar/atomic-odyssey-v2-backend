@@ -20,13 +20,15 @@ class Auth:
     #password
     #profile pic
     #uid from firebase
-    def create_account(uuid, username, email, password):
+    def create_account(uuid, username):
+        
+
         UserDB.add({
             "username": username,
-            "email": email,
-            "password": password,
             "uuid" : uuid
         })
+
+        #Auth.upload_profile_pic(profile_pic_file)
 
         return jsonify(message = "User creation successful"), 200
         
