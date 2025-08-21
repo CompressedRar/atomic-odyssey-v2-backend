@@ -1,4 +1,5 @@
-from FirebaseApi.config import UserDB, profile_storage
+from FirebaseApi.config import UserDB
+from StorageApi.config import profile_storage
 import uuid
 from flask import jsonify
 class Auth:
@@ -22,12 +23,12 @@ class Auth:
     #uid from firebase
     def create_account(uuid, username):
         
-
+        print("creating account")
         UserDB.add({
             "username": username,
             "uuid" : uuid
         })
-
+        print("account created")
         #Auth.upload_profile_pic(profile_pic_file)
 
         return jsonify(message = "User creation successful"), 200
