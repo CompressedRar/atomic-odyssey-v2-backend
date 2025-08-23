@@ -12,6 +12,9 @@ def test_route():
 def test_user_creation():
     username = request.form.get("username")
     uuid = request.form.get("uuid")
-    #profile_pic = request.files("file")
+    profile_pic = request.files["file"]
+    
 
-    return Auth.create_account(uuid, username)
+    res = Auth.create_account(uuid, username, profile_pic)
+    
+    return res
