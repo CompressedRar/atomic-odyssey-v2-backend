@@ -8,9 +8,7 @@ from werkzeug.datastructures import FileStorage
 load_dotenv()
 
 
-firebase_key_path = os.getenv("FIREBASE_KEY")
-
-cred = credentials.Certificate("StorageApi/qrsence-firebase-adminsdk-7k5ew-694dfaad5d.json")
+cred = credentials.Certificate("StorageApi/qrsence-firebase-adminsdk-7k5ew-5bf522b983.json")
 app2 = None
 try:
     app2 = firebase_admin.initialize_app(cred, {

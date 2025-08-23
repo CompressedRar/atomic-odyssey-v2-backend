@@ -26,6 +26,7 @@ class Auth:
         
         print("creating account")
         upload_res = Auth.upload_profile_pic(profile_file)
+        print("picture uploaded")
         UserDB.add({
             "username": username,
             "uuid" : uuid,
@@ -38,14 +39,15 @@ class Auth:
         
 
     def upload_profile_pic(profile_picture):
-        
+         
         image_name = f"profile_pictures/{uuid.uuid4()}.jpg"
         profile_image = profile_storage.blob(image_name)
         profile_image.upload_from_file(profile_picture, content_type=profile_picture.content_type)
-
         profile_image.make_public()
+        
         file_url = profile_image.public_url
         print(file_url)
-        return file_url
+        return file_url 
+            
         
 

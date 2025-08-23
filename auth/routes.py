@@ -14,7 +14,7 @@ def test_user_creation():
     uuid = request.form.get("uuid")
     profile_pic = request.files["file"]
     
-
+    print(profile_pic)
     res = Auth.create_account(uuid, username, profile_pic)
     
     return res
