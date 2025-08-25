@@ -25,15 +25,23 @@ class Auth:
     def create_account(uuid, username, profile_file):
         
         print("creating account")
-        upload_res = Auth.upload_profile_pic(profile_file)
-        print("picture uploaded")
-        UserDB.add({
-            "username": username,
-            "uuid" : uuid,
-            "link": upload_res
-        })
-        print("account created")
-        
+
+        try:
+            if profile_file:
+                upload_res = Auth.upload_profile_pic(profile_file)
+                print("picture uploaded")
+        except:
+            return jsonify(message = "Uploading Profile Picture Failed"), 400
+
+        try:
+            UserDB.add({
+                "username": username,
+                "uuid" : uuid,
+                "link": upload_res
+            })
+            print("account created")
+        except:
+            return jsonify(message = "Account Creation Failed"), 400
 
         return jsonify(message = "User creation successful"), 200
         
