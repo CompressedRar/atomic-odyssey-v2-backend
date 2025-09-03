@@ -7,7 +7,7 @@ load_dotenv()
 
 firebase_key_path = os.getenv("FIREBASE_KEY")
 
-cred = credentials.Certificate("FirebaseApi/atomic-odyssey-3d061-0085f19ecd79.json")
+cred = credentials.Certificate("FirebaseApi/atomic-odyssey-3d061-firebase-adminsdk-fbsvc-64b12f17f8.json")
 app1 = None
 
 try:

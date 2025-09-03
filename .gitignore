@@ -9,8 +9,8 @@ __pycache__/
 .env
 
 # Firebase keys
-FirebaseApi/atomic-odyssey-firebase-adminsdk-fbsvc-6ac5414c03.json
-
+FirebaseApi/atomic-odyssey-3d061-firebase-adminsdk-fbsvc-64b12f17f8.json
+StorageApi/qrsence-firebase-adminsdk-7k5ew-8edd4b858d.json
 # VSCode
 .vscode/
 
