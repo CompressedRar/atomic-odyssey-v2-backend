@@ -8,7 +8,7 @@ from werkzeug.datastructures import FileStorage
 load_dotenv()
 
 
-cred = credentials.Certificate("StorageApi/qrsence-firebase-adminsdk-7k5ew-8edd4b858d.json")
+cred = credentials.Certificate("StorageApi/tofis-app-firebase-adminsdk-fbsvc-e1ccd29a7c.json")
 app2 = None
 try:
     app2 = firebase_admin.initialize_app(cred, {
@@ -34,7 +34,7 @@ def upload_file(profile_picture):
 def test_upload(filepath):
     with open(filepath, "rb") as f:
         file_storage = FileStorage(stream=f, filename=filepath, content_type="image/png")
-
+            
         upload_file(file_storage)
 
 #test_upload("background.png")
