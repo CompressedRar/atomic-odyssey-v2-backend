@@ -10,8 +10,7 @@ __pycache__/
 .venv
 
 # Firebase keys
-FirebaseApi/atomic-odyssey-3d061-firebase-adminsdk-fbsvc-64b12f17f8.json
-FirebaseApi/tofis-app-firebase-adminsdk-fbsvc-e1ccd29a7c.json
+FirebaseApi/config.json
 StorageApi/tofis-app-firebase-adminsdk-fbsvc-e1ccd29a7c.json
 # VSCode
 .vscode/
