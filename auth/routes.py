@@ -7,6 +7,16 @@ def test_route():
     count = Auth.getUserCount()
     return jsonify(message = count)
 
+@auth_bp.route("/upload/profile", methods = ["POST"])
+def upload_profile_pic():
+    profile_pic = request.files["file"]
+    res = Auth.upload_profile_pic(profile_pic)
+
+    return jsonify({
+        "link": res
+    })
+
+
 
 @auth_bp.route("/test-user-create", methods = ["POST"])
 def test_user_creation():
